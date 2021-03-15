@@ -77,7 +77,7 @@ $(function () {
     // fixed layout
     $('#_fixedlayout').change(function(){
         if( $(this).is(':checked') ) {
-           $('body').addClass('fixed-layout');
+            $('body').addClass('fixed-layout');
             $('#sidebar-collapse').slimScroll({
                 height: '100%',
                 railOpacity: '0.9',

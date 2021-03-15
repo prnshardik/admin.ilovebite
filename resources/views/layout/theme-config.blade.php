@@ -8,12 +8,12 @@
         <div class="font-strong">LAYOUT OPTIONS</div>
         <div class="check-list m-b-20 m-t-10">
             <label class="ui-checkbox ui-checkbox-gray">
-                <input id="_fixedNavbar" type="checkbox" checked>
+                <input id="_fixedNavbar" type="checkbox">
                 <span class="input-span"></span>
                 Fixed navbar
             </label>
             <label class="ui-checkbox ui-checkbox-gray">
-                <input id="_fixedlayout" type="checkbox">
+                <input id="_fixedlayout" type="checkbox" checked="checked">
                 <span class="input-span"></span>
                 Fixed layout
             </label>
