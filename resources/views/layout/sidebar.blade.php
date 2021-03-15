@@ -2,10 +2,10 @@
     <div id="sidebar-collapse">
         <div class="admin-block d-flex">
             <div>
-                <img src="{{ asset('assets/img/admin-avatar.png') }}" width="45px" />
+                <img src="{{ url('assets/uploads/users').'/'.auth()->user()->image }}" width="45px" />
             </div>
             <div class="admin-info">
-                <div class="font-strong">James Brown</div><small>Administrator</small>
+                <div class="font-strong">{{ auth()->user()->firstname }} {{ auth()->user()->lastname }}</div><small>Administrator</small>
             </div>
         </div>
         <ul class="side-menu metismenu">

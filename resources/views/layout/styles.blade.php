@@ -6,4 +6,6 @@
 
 <link href="{{ asset('assets/vendors/toastr/toastr.min.css') }}" rel="stylesheet" />
 
+<style> .error{ color:red; } </style>
+
 @yield('styles')

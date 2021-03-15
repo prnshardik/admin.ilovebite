@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('image')->nullable();
             $table->enum('status', ['active', 'inactive', 'deleted'])->default('inactive');
             $table->enum('is_admin', ['Y', 'N'])->default('N');
             $table->rememberToken()->nullable();
@@ -34,6 +35,7 @@ class CreateUsersTable extends Migration
                 'lastname' => 'Admin',
                 'email' => 'superadmin@ilovebite.com',
                 'password' => bcrypt('Admin@123'),
+                'image' => 'admin-avatar.png',
                 'status' => 'active',
                 'is_admin' => 'Y',
                 'created_at' => date('Y-m-d H:i:s'),
