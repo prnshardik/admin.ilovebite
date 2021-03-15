@@ -1,2 +1,63 @@
 @extends('auth.layout')
 
+@section('meta')
+@endsection
+
+@section('title')
+    Login
+@endsection
+
+@section('content')
+    <div class="brand" style="margin-top:150px;">
+        <a class="link" href="{{ route('home') }}">{{ _site_title() }}</a>
+    </div>
+    <form id="form" action="javascript:;" method="post">
+        @csrf
+        @method('post')
+
+        <h2 class="login-title">Log in</h2>
+        <div class="form-group">
+            <div class="input-group-icon right">
+                <div class="input-icon"><i class="fa fa-envelope"></i></div>
+                <input class="form-control" type="email" name="email" placeholder="Email" autocomplete="off">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group-icon right">
+                <div class="input-icon"><i class="fa fa-lock font-16"></i></div>
+                <input class="form-control" type="password" name="password" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group d-flex justify-content-between">
+            <a href="forgot_password.html">Forgot password?</a>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-info btn-block" type="submit">Login</button>
+        </div>
+    </form>
+@endsection
+
+@section('scripts')
+    <script type="text/javascript">
+        $(function() {
+            $('#login-form').validate({
+                errorClass: "help-block",
+                rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    password: {
+                        required: true
+                    }
+                },
+                highlight: function(e) {
+                    $(e).closest(".form-group").addClass("has-error")
+                },
+                unhighlight: function(e) {
+                    $(e).closest(".form-group").removeClass("has-error")
+                },
+            });
+        });
+    </script>
+@endsection
